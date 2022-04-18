@@ -1,0 +1,21 @@
+.position-relative {
+  position: relative;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.reverse-mobile {
+  @include mobile() {
+    flex-direction: column-reverse;
+  }
+}

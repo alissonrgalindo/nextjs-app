@@ -1,0 +1,92 @@
+@import "../../styles/mixin";
+@import "../../styles/colors";
+
+.footer {
+  border-top: 1px solid $snow;
+  padding: 64px 0;
+  @include mobile() {
+    padding: 44px 0;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include mobile() {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 40px;
+    }
+  }
+  .list {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    @include mobile() {
+      gap: 30px;
+    }
+    &__item {
+      a {
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.3px;
+        transition: 0.3s ease-in-out linear;
+        color: $gray;
+        @include mobile() {
+          padding: 0;
+        }
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+  .details {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .network {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: flex-end;
+    @include mobile() {
+      gap: 30px;
+      justify-content: flex-start;
+    }
+    &__item {
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+      span {
+        max-height: 24px;
+      }
+      @include mobile() {
+        span {
+          max-height: 19px;
+        }
+      }
+    }
+  }
+  .copyright {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: .7px;
+    color: $medium-gray;
+    @include mobile() {
+        text-align: left;
+      }
+  }
+  .container {
+    @include mobile() {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}

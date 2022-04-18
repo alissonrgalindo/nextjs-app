@@ -1,0 +1,110 @@
+[
+  {
+    "sku": "APP-CAR-1",
+    "name": "Classic - Rooftop Tent",
+    "size": "small",
+    "price": 10,
+    "category": "cars",
+    "image": "https://imgur.com/Kpkx0l2.jpg",
+    "stockLevel": 10
+  },
+  {
+    "sku": "APP-CAR-2",
+    "name": "Van Life",
+    "size": "big",
+    "price": 20,
+    "category": "cars",
+    "image": "https://imgur.com/bXySV79.jpg",
+    "stockLevel": 2
+  },
+  {
+    "sku": "APP-CAR-3",
+    "name": "Jeep - Rooftop Tent",
+    "size": "small",
+    "price": 15,
+    "category": "cars",
+    "image": "https://imgur.com/caYruaj.jpg",
+    "stockLevel": 40
+  },
+  {
+    "sku": "APP-CAR-4",
+    "name": "Old Van - No Stop",
+    "size": "medium",
+    "price": 2,
+    "category": "cars",
+    "image": "https://imgur.com/byrSx2f.jpg",
+    "stockLevel": 20
+  },
+  {
+    "sku": "APP-CAR-5",
+    "name": "Van Luxury ",
+    "size": "medium",
+    "price": 30,
+    "category": "cars",
+    "image": "https://imgur.com/sW77694.jpg",
+    "stockLevel": 3
+  },
+  {
+    "sku": "APP-CAR-6",
+    "name": "Car camping roots ",
+    "size": "small",
+    "price": 5,
+    "category": "cars",
+    "image": "https://imgur.com/aQyAzAf.jpg",
+    "stockLevel": 32
+  },
+  {
+    "sku": "APP-HOUSE-1",
+    "name": "Cold",
+    "size": "medium",
+    "category": "houses",
+    "image": "https://imgur.com/wEjP4Jm.jpg",
+    "price": 100,
+    "stockLevel": 2
+  },
+  {
+    "sku": "APP-HOUSE-2",
+    "name": "Fancy",
+    "size": "big",
+    "category": "houses",
+    "image": "https://imgur.com/2fBVhmh.jpg",
+    "price": 300,
+    "stockLevel": 2
+  },
+  {
+    "sku": "APP-HOUSE-3",
+    "name": "Tolkien ",
+    "size": "small",
+    "category": "houses",
+    "image": "https://imgur.com/SExAh1S.jpg",
+    "price": 100,
+    "stockLevel": 1
+  },
+  {
+    "sku": "APP-TOOL-1",
+    "name": "Chair",
+    "size": "large",
+    "category": "tools",
+    "image": "https://imgur.com/vURVVVX.jpg",
+    "price": 3,
+    "stockLevel": 3
+  },
+  {
+    "sku": "APP-TOOL-2",
+    "name": "Cooler",
+    "size": "large",
+    "category": "tools",
+    "image": "https://imgur.com/FQYTEYC.jpg",
+    "price": 10,
+    "stockLevel": 8
+  },
+  {
+    "sku": "APP-TOOL-3",
+    "name": "Grill",
+    "size": "large",
+    "category": "tools",
+    "image": "https://imgur.com/6abcr5S.jpg",
+    "price": 8,
+    "stockLevel": 4
+  }
+]

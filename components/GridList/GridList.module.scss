@@ -1,0 +1,13 @@
+@import "../../styles/mixin";
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 100px 0;
+  justify-content: center;
+  @include mobile() {
+    padding: 40px 0;
+    justify-content: flex-start;
+  }
+}

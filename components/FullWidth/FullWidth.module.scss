@@ -1,0 +1,10 @@
+@import "../../styles/mixin";
+@import "../../styles/colors";
+
+.section {
+  background-color: $lightest-gray;
+  height: 456px;
+  @include mobile() {
+    min-height: auto;
+  }
+}

@@ -1,0 +1,153 @@
+@import "../../styles/mixin";
+@import "../../styles/colors";
+.content {
+  width: 100%;
+  .header {
+    display: grid;
+    grid-template-columns: 200px 118px 118px 130px 80px;
+    border-bottom: 2px solid $light-gray;
+    padding-bottom: 10px;
+    @include mobile() {
+      display: none;
+    }
+  }
+  .label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: $gray;
+  }
+  .body {
+    &__line {
+      padding: 12px 0;
+      display: grid;
+      grid-template-columns: 200px 118px 118px 130px 80px;
+      align-items: center;
+      @include mobile() {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+      label {
+        display: none;
+        @include mobile() {
+          display: block;
+        }
+      }
+    }
+    .product {
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 24px;
+      @include mobile() {
+        border-bottom: 2px solid $light-gray;
+      }
+    }
+    .price {
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      @include mobile() {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    .quantity {
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 24px;
+      @include mobile() {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    .count {
+      border-radius: 3px;
+      border: 1px solid $blue;
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      width: 75px;
+      margin: auto; 
+      padding: 1px 10px;
+      input {
+        max-width: 30px;
+        text-align: center;
+        background-color: transparent;
+        font-weight: 200;
+        font-size: 14px;
+        line-height: 24px;
+        &:focus {
+          outline-width: 0;
+        }
+      }
+      input[type=number]::-webkit-inner-spin-button, 
+      input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+      }
+      button {
+        cursor: pointer;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+      }
+      @include mobile() {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+      }
+    }
+    .cost {
+      text-align: right;
+      font-size: 14px;
+      line-height: 24px;
+      @include mobile() {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+    .action {
+      text-align: right;
+      @include mobile() {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &__button {
+        cursor: pointer;
+        background-color: transparent;
+      }
+    }
+
+  }
+  .footer {
+    width: 100%;
+    padding-right: 80px;
+    margin-top: 40px;
+    @include mobile() {
+      padding-right: 0;
+    }
+    &__line {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      line-height: 24px;
+      color: $gray;
+      margin-bottom: 12px;
+    }
+    &__action {
+      margin-top: 50px;
+      display: block;
+      text-align: right;
+      @include mobile() {
+        margin-top: 40px;
+      }
+    }
+  }
+}

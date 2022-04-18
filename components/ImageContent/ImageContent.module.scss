@@ -1,0 +1,16 @@
+@import "../../styles/mixin";
+
+.content {
+  position: relative;
+  overflow: hidden;
+  width: calc(100% + 46px);
+  max-width: 683px;
+  height: 683px;
+  margin-left: -46px;
+  @include mobile() {
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    height: 345px;
+    max-width: calc(100% + 48px);
+  }
+}

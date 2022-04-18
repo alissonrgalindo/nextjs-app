@@ -1,0 +1,14 @@
+@import "../../styles/mixin";
+@import "../../styles/colors";
+
+.title {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+  &__content {
+    color: $gray;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+  }
+}
