@@ -9,15 +9,13 @@ export default function CardNews({ id, title, image }) {
 
   const titleCard = {
     initial: {
-      y: -10,
       scale: 1,
       transition: {
         duration: 0.5,
       },
     },
     show: {
-      y: 0,
-      scale: .7,
+      scale: .8,
       transition: {
         duration: 0.5,
       },

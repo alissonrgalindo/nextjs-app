@@ -1,7 +1,7 @@
 import style from "./style.module.scss";
 import Image from "next/image";
 import logo from "../../public/logo.png";
-import { navLinks } from "../../utils/dataMenuFooter";
+import { navLinks } from "../../utils/dataMenu";
 import Link from "next/link";
 import googleLogo from "../../public/google-logo.svg";
 import facebookLogo from "../../public/facebook-logo.svg";

@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
-import ProductCard from "../../components/ProductCard";
-import { getProductsByCategory } from "../api/products/[category]";
+import getNewsById from "../api/news/[news]"
 import GridList from "../../components/GridList";
 import GridTitle from "../../components/GridTitle";
 import Layout from "../../components/Layout";
@@ -8,8 +7,9 @@ import Head from "next/head";
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import NewsDetail from "../../components/NewsDetail"
 
-export default function CategoryPage({ products }) {
+export default function NewsPage({ news }) {
   const router = useRouter();
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -37,7 +37,7 @@ export default function CategoryPage({ products }) {
   return (
     <>
       <Head>
-        <title>Category - My dream Store</title>
+        <title>Checkout - My dream Store</title>
         <meta name="description" content="Checkout My Dream Store!" />
         <meta property="og:title" content="Checkout - My Dream Store" />
         <meta property="og:description" content="Checkout My Dream Store!" />
@@ -51,12 +51,10 @@ export default function CategoryPage({ products }) {
       <Layout>
         <motion.div ref={ref} variants={container} initial="hidden" animate={controls}>
           <GridList>
-            <GridTitle title={router.query.category} />
-            {products.map((product) => (
-              <motion.div key={product.sku} variants={item}>
-                <ProductCard product={product} />
+            <GridTitle title={router.query.id} />
+              <motion.div variants={item}>
+                <NewsDetail news ={news}/>
               </motion.div>
-            ))}
           </GridList>
         </motion.div>
       </Layout>
@@ -65,7 +63,7 @@ export default function CategoryPage({ products }) {
 }
 
 export async function getServerSideProps(ctx) {
-  const category = ctx.query.category;
-  const products = await getProductsByCategory(category);
-  return { props: { products } };
+  const id = ctx.query.id;
+  const news = await getNewsById(id);
+  return { props: { news } };
 }

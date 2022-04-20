@@ -11,7 +11,7 @@ export default function Products() {
   return (
     <>
       <Head>
-        <title>Checkout - My dream Store</title>
+        <title>Products - My dream Store</title>
         <meta name="description" content="Checkout My Dream Store!" />
         <meta property="og:title" content="Checkout - My Dream Store" />
         <meta property="og:description" content="Checkout My Dream Store!" />

@@ -10,7 +10,7 @@ export default function News({news}) {
   return (
     <>
       <Head>
-        <title>Checkout - My dream Store</title>
+        <title>News - My dream Store</title>
         <meta name="description" content="Checkout My Dream Store!" />
         <meta property="og:title" content="Checkout - My Dream Store" />
         <meta property="og:description" content="Checkout My Dream Store!" />
