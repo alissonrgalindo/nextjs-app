@@ -1,4 +1,4 @@
-import style from "./Content.module.scss";
+import style from "./style.module.scss";
 import Button from "../Button";
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";

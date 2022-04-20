@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import style from "./Nav.module.scss";
+import style from "./style.module.scss";
 import Image from "next/image";
 import iconCart from "../../public/icon-cart.svg";
 import iconMenu from "../../public/icon-menu.svg";
@@ -34,7 +34,7 @@ export default function Nav() {
 
   const overlayBG = {
     open: (height = 1000) => ({
-      clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+      clipPath: `circle(${height * 2 + 200}px at 100% -10px)`,
       transition: {
         type: "spring",
         stiffness: 20,
@@ -42,7 +42,7 @@ export default function Nav() {
       },
     }),
     closed: {
-      clipPath: "circle(30px at 40px 40px)",
+      clipPath: "circle(30px at 100% -10px)",
       transition: {
         delay: 0.2,
         type: "spring",

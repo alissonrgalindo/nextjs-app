@@ -1,27 +1,18 @@
-import React, { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import style from "./ImageContent.module.scss";
+import { motion } from "framer-motion";
+import style from "./style.module.scss";
 import Image from "next/image";
 
 export default function ImageContent({ background, alt }) {
   const squareVariants = {
-    visible: { x: 0, transition: { duration: 1.5 } },
-    hidden: { x: "-100%" },
+    visible: { opacity: 1, x:[-200, 0], transition: { duration: 1.5 } },
+    hidden: { opacity: 0 },
   };
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
 
   return (
     <motion.div
-      ref={ref}
-      animate={controls}
       initial="hidden"
+      viewport={{ once: true }}
+      whileInView="visible"
       variants={squareVariants}
       className={style.content}
     >

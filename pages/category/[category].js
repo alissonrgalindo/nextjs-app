@@ -22,6 +22,7 @@ export default function CategoryPage({ products }) {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
+      width: "100%",
       transition: {
         staggerChildren: 0.3,
       },
@@ -29,8 +30,8 @@ export default function CategoryPage({ products }) {
   };
 
   const item = {
-    hidden: { opacity: 0, y: -50 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+    hidden: { opacity: 0, y: -50},
+    show: { opacity: 1, y: 0,transition: { duration: 0.8 } },
   };
 
   return (

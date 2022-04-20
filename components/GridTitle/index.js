@@ -1,4 +1,4 @@
-import style from "./GridTitle.module.scss";
+import style from "./style.module.scss";
 
 export default function GridTitle({title}) {
   return (

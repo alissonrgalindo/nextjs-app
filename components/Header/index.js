@@ -1,10 +1,10 @@
-import style from "./Header.module.scss";
+import style from "./style.module.scss";
 import Image from "next/image";
 import profilePic from "../../public/logo.png";
 import Nav from "../Nav";
 import Link from "next/link";
 
-export default function Header({ content }) {
+export default function Header() {
   return (
     <header className={style.header}>
       <div className="container d-flex space-between align-center">

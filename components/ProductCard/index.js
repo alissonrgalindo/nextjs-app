@@ -1,4 +1,4 @@
-import style from "./ProductCard.module.scss";
+import style from "./style.module.scss";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cart.slice";
 
 export default function ProductCard({ product }) {
-const [isOnHover, setIsShown] = useState(false);
+  const [isOnHover, setIsShown] = useState(false);
   const dispatch = useDispatch();
   const imageBg = {
     initial: {
@@ -18,7 +18,35 @@ const [isOnHover, setIsShown] = useState(false);
     show: {
       scale: 1,
       transition: {
-        duration: .8,
+        duration: 0.8,
+      },
+    },
+  };
+  const textCard = {
+    initial: {
+      y: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+    show: {
+      y: 30,
+      transition: {
+        duration: 0.8,
+      },
+    },
+  };
+  const contentHeight = {
+    initial: {
+      height: "100%",
+      transition: {
+        duration: 1,
+      },
+    },
+    show: {
+      height: "20%",
+      transition: {
+        duration: 0.8,
       },
     },
   };
@@ -29,10 +57,11 @@ const [isOnHover, setIsShown] = useState(false);
       onMouseEnter={() => setIsShown(true)}
       onMouseLeave={() => setIsShown(false)}
     >
-      <motion.div 
-      className={style.image}
-      variants={imageBg}
-        animate={isOnHover ? "show" : "initial"}>
+      <motion.div
+        className={style.image}
+        variants={imageBg}
+        animate={isOnHover ? "show" : "initial"}
+      >
         <Image
           src={product.image}
           alt={product.category}
@@ -41,15 +70,31 @@ const [isOnHover, setIsShown] = useState(false);
           quality={100}
         />
       </motion.div>
-      <div className={style.content}>
-        <h2 className={`${style.title} font-medium`}>{product.name}</h2>
-        <span className={style.price}>£{product.price}</span>
+      <motion.div
+        className={style.content}
+        variants={contentHeight}
+        animate={isOnHover ? "show" : "initial"}
+      >
+        <motion.h2
+          className={`${style.title} font-medium`}
+          variants={textCard}
+          animate={isOnHover ? "show" : "initial"}
+        >
+          {product.name}
+        </motion.h2>
+        <motion.span
+          className={style.price}
+          variants={textCard}
+          animate={isOnHover ? "show" : "initial"}
+        >
+          £{product.price}
+        </motion.span>
         <div className={style.action}>
           <button className="btn" onClick={() => dispatch(addToCart(product))}>
             Buy Now
           </button>
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

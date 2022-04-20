@@ -1,4 +1,4 @@
-import style from "./Footer.module.scss";
+import style from "./style.module.scss";
 import Image from "next/image";
 import profilePic from "../../public/logo.png";
 import { navLinks } from "../../utils/dataMenuFooter";

@@ -1,4 +1,4 @@
-import style from "./FullWidth.module.scss";
+import style from "./style.module.scss";
 
 export default function FullWidth({children}) {
   return (

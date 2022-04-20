@@ -1,0 +1,18 @@
+@import "../../styles/colors";
+.list {
+    width: 100%;
+    padding: 32px 24px;
+    background-color: $white;
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px dashed $light-gray;
+        padding-bottom: 12px;
+        color: $medium-gray;
+        margin-bottom: 16px;
+    }
+    .title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

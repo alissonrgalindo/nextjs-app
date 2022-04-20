@@ -6,6 +6,9 @@
   width: 300px;
   height: 300px;
   cursor: pointer;
+  @include mobile() {
+    width: 100%;
+  }
   &::before {
     position: absolute;
     width: 100%;

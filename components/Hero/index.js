@@ -1,4 +1,4 @@
-import style from "./Hero.module.scss";
+import style from "./style.module.scss";
 import Image from "next/image";
 import backgroundImage from "../../public/background-hero.png";
 import { motion } from "framer-motion";

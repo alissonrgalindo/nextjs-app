@@ -4,6 +4,7 @@ const cartSlice = createSlice({
   name: 'cart',
   initialState: [],
   reducers: {
+    
     addToCart: (state, action) => {
       const productExists = state.find((product) => product.sku === action.payload.sku);
       if (productExists) {
@@ -19,8 +20,8 @@ const cartSlice = createSlice({
       }
     },
     updateQuantity: (state, action) => {
-      const value = action.payload[1]
-      const product = state.find((product) => product.sku === action.payload[0]);
+      const value = action.payload.value
+      const product = state.find((product) => product.sku === action.payload.sku);
       if (value <= product.stockLevel && value > 0) {
         product.quantity = value
       }
@@ -48,5 +49,5 @@ export const {
   incrementQuantity,
   updateQuantity,
   decrementQuantity,
-  removeFromCart,
+  removeFromCart
 } = cartSlice.actions;

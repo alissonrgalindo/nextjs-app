@@ -31,7 +31,4 @@ a {
   width: min(100% - 46px, 1366px);
   margin: auto;
   height: 100%;
-  @include mobile() {
-    padding: 0 24px;
-  }
 }

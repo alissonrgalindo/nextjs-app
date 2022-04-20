@@ -5,7 +5,7 @@ import FullWidth from "../components/FullWidth";
 import Content from "../components/Content";
 import ImageContent from "../components/ImageContent";
 import background from "../public/image-content.png";
-import ContentMiddle from "../components/ContentMiddle";
+
 
 export default function Home() {
   return (
@@ -33,7 +33,7 @@ export default function Home() {
         <section>
           <div className="container d-flex reverse-mobile">
             <ImageContent background={background} alt="Image Background" />
-            <ContentMiddle>
+            <div className="d-flex align-center justify-center w-100">
               <Content
                 size="small"
                 aligment="left"
@@ -42,7 +42,7 @@ export default function Home() {
                 url="/news"
                 label="Read Latest"
               />
-            </ContentMiddle>
+            </div>
           </div>
         </section>
       </Layout>
