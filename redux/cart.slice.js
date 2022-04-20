@@ -1,4 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
+const Initial = {
+  returned: []
+}
 
 const cartSlice = createSlice({
   name: 'cart',
@@ -39,6 +42,7 @@ const cartSlice = createSlice({
       const index = state.findIndex((product) => product.sku === action.payload);
       state.splice(index, 1);
     },
+    cleanCart: () => []
   },
 });
 
@@ -49,5 +53,6 @@ export const {
   incrementQuantity,
   updateQuantity,
   decrementQuantity,
-  removeFromCart
+  removeFromCart,
+  cleanCart
 } = cartSlice.actions;

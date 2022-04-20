@@ -5,7 +5,7 @@ import lessIcon from "../../public/icon-less.svg";
 import moreIcon from "../../public/icon-more.svg";
 import deleteIcon from "../../public/delete-icon.svg";
 import { useSelector, useDispatch } from "react-redux";
-import { incrementQuantity, decrementQuantity, removeFromCart, updateQuantity } from "../../redux/cart.slice";
+import { incrementQuantity, decrementQuantity, removeFromCart, updateQuantity, cleanCart } from "../../redux/cart.slice";
 import { motion } from "framer-motion";
 import ListOrder from "../ListOrder";
 
@@ -60,6 +60,7 @@ const submitOrder = async (event) => {
   });
   const result = await res.json();
   setOrder(result);
+  dispatch(cleanCart())
 };
 
 console.log({result});

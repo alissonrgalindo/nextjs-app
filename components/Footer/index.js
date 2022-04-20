@@ -1,6 +1,6 @@
 import style from "./style.module.scss";
 import Image from "next/image";
-import profilePic from "../../public/logo.png";
+import logo from "../../public/logo.png";
 import { navLinks } from "../../utils/dataMenuFooter";
 import Link from "next/link";
 import googleLogo from "../../public/google-logo.svg";
@@ -15,7 +15,7 @@ export default function Footer() {
         <div className={style.menu}>
           <Link href="/" passHref>
             <a>
-              <Image src={profilePic} alt="Logo App" width={60} height={20}/>
+              <Image src={logo} alt="Logo App" width={60} height={20}/>
             </a>
           </Link>
           <ul className={style.list}>

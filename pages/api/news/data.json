@@ -1,0 +1,30 @@
+[
+  {
+    "id": "news-1",
+    "title": "Classic - Rooftop Tent",
+    "date": "10/102022",
+    "text": "cars",
+    "image": "https://imgur.com/Kpkx0l2.jpg"
+  },
+  {
+    "id": "news-2",
+    "title": "Classic2 - Rooftop Tent",
+    "date": "10/102022",
+    "text": "cars",
+    "image": "https://imgur.com/Kpkx0l2.jpg"
+  },
+  {
+    "id": "news-3",
+    "title": "Classic3 - Rooftop Tent",
+    "date": "10/102022",
+    "text": "cars",
+    "image": "https://imgur.com/Kpkx0l2.jpg"
+  },
+  {
+    "id": "news-4",
+    "title": "Classic4 - Rooftop Tent",
+    "date": "10/102022",
+    "text": "cars",
+    "image": "https://imgur.com/Kpkx0l2.jpg"
+  }
+]
